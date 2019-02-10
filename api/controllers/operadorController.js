@@ -13,11 +13,9 @@ exports.get = function (req, res) {
 
 exports.getOperadores = function (req, res) {
     
-    var query = 'SELECT * FROM operador';
+    var operadorRepository = require('../repository/operadoresRepository');
 
-    global.conn.request()
-        .query(query).then(result => res.json(result.recordset))
-        .catch(err => res.json(err));
+    operadorRepository.getAll(res);
 }
 
 

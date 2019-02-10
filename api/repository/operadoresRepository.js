@@ -1,5 +1,5 @@
 'use strict'
-exports.getAll = function(req, res) {
+exports.getAll = function(res) {
     var repository = require('./repository');
-    repository.execSQLQuery("SELECT * from operador", req, res);
+    repository.execSQLQuery("SELECT * from operador", res);
 }
